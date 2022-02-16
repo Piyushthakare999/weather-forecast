@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="icon" href="assets/W Logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <head>
+        <div id="test">
+            <nav>
+                <img src="assets/W Logo.png" alt="">
+                <!-- <ul> -->
+                <div id="webname"><span>World Weather</span> </div>
+                <div id="searchtop">
+                    <div class="search-container">
+                        <input type="text" class="search-box" placeholder="Search.." spellcheck="false">
+                        <!-- <img src="assets/magnifier.png" alt=""> -->
+                        <button class="search-button" onclick="getcity1()"><img src="assets/magnifier.png"
+                                alt=""></button>
+                    </div>
+                    <!-- <input type="text" id="in1">
+                    <button onclick="getcity1()" id="search">
+                         <div id="search"> -->
+                    <!-- </div> -->
+                    <!-- </button> -->
+                </div>
+        </div>
+        <!-- </ul> -->
+        </nav>
+    </head>
+    <div id="intro">
+        <div id="welcome">
+            <div id="wctext">Welcome to<span>Weather Forecast</span>
+                <div id="wtext2">
+                    Get all weather data of any location in the world at one click!</div>
+            </div>
+            <div id="Lenter">Enter the city name</div>
+            <input type="text" id="in2" spellcheck="false">
+            <button id="search" onclick="getcity2()">
+                search
+            </button>
+            <div id="or"> <span>OR</span> </div>
+            <button id="Locate" onclick="getlocation()">Use device location</button>
+        </div>
+    </div>
+    <div id="main">
+        <div id="main1">
+            <div id="basic">
+                <div id="b2">
+                    <div id="temp"><span></span>°</div>
+                    <div id="location">
+                        <div id="cityname"></div>
+                        <div id="datentime">1-1-1</div>
+                    </div>
+                    <div id="icon">
+                        <img src="" alt="">
+                        <div id="des"></div>
+                    </div>
+                </div>
+            </div>
+            <div id="detail">
+                <div id="dbtns">
+                    <div class="detailbtn" id="btnwd" onclick="change1()">Weather Details</div>
+                    <div class="detailbtn" id="btnweek" onclick="change2()">7 days</div>
+                </div>
+                <div id="wdetail">
+                    <table>
+                        <tr>
+                            <td class="td1">feels like</td>
+                            <td class="td2" id="feelslike">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="humidity">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">pressure</td>
+                            <td class="td2" id="pressure">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="temperature"><span></span>°C</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="uvi">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Dew point</td>
+                            <td class="td2" id="dew_point">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Sunrise</td>
+                            <td class="td2" id="Sunrise">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">Sunset</td>
+                            <td class="td2" id="Sunset">30</td>
+                        </tr>
+
+                    </table>
+                </div>
+                <div id="week">
+                    <table>
+                        <!-- <th style="text-align: center;">day 1</th> -->
+                        <tr class="dd">
+                            <td id="date1">date</td>
+                            <td id="day1"><img src="" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="td1a">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="td1b">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="td1c">30</td>
+                        </tr>
+                        <!-- <th style="text-align: center;">day 2</th> -->
+                        <tr class="dd">
+                            <td id="date2">date</td>
+                            <td id="day2"><img src="" alt=""></td>
+
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="td2a">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="td2b">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="td2c">30</td>
+                        </tr>
+                        <!-- <th style="text-align: center;">day 3</th> -->
+                        <tr class="dd">
+                            <td id="date3">date</td>
+                            <td id="day3"><img src="" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="td3a">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="td3b">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="td3c">30</td>
+                        </tr>
+                        <!-- <th style="text-align: center;">day 4</th> -->
+                        <tr class="dd">
+                            <td id="date4">date</td>
+                            <td id="day4"><img src="" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="td4a">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="td4b">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="td4c">30</td>
+                        </tr>
+                        <!-- <th style="text-align: center;">day 5</th> -->
+                        <tr class="dd">
+                            <td id="date5">date</td>
+                            <td id="day5"><img src="" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="td5a">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="td5b">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="td5c">30</td>
+                        </tr>
+                        <!-- <th style="text-align: center;">day 6</th> -->
+                        <tr class="dd">
+                            <td id="date6">date</td>
+                            <td id="day6"><img src="" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="td6a">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="td6b">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="td6c">30</td>
+                        </tr>
+                        <!-- <th style="text-align: center;">day 7</th> -->
+                        <tr class="dd">
+                            <td id="date7">date</td>
+                            <td id="day7"><img src="" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td1">temperature</td>
+                            <td class="td2" id="td7a">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">UV index</td>
+                            <td class="td2" id="td7b">30</td>
+                        </tr>
+                        <tr>
+                            <td class="td1">humidity</td>
+                            <td class="td2" id="td7c">30</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+<script src="main.js"></script>
+
+</html>
