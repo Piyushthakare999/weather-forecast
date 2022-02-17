@@ -496,7 +496,8 @@ td>img{
         width: 50%;
         backdrop-filter: blur(7px);
         flex-direction: column;
-        margin: 40% auto ;
+        margin: auto ;
+        margin-top: 70px;
     }
     #wctext>span{
         text-shadow: 2px 2px 2px black;
@@ -504,9 +505,14 @@ td>img{
     body{
         background-position-x: auto;
         background-repeat: no-repeat;
-        background-size:100vw 100vh ;
+        /* background-size:100vw 100vh ; */
         background: url("assets/sunset.jpg");
-        background-size: auto 100%;
+        background-size:  center center;
+        background-attachment: fixed;
+        background-size: cover;
+        overflow: hidden; 
+        /* object-fit: scale-down; */
+        /* background-position: auto; */
     }
     /* nav>img{
         height: 6vw;
@@ -608,7 +614,7 @@ td>img{
         /* align-items: center; */
         /* padding-bottom: 20px; */
         /* height */
-        height: 10vh;
+        /* height: 10vh; */
     }
     #icon{
         margin-bottom: 20px;
