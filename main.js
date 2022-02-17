@@ -53,9 +53,9 @@ document.addEventListener("keyup", (e) => {
 
 function getlocation() {
     // console.log(navigator.getlocation)
-    if (navigator.getlocation) {
+    if (navigator.geolocation) {
         // alert("hi")
-        navigator.getlocation.getCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
     }
     else {
