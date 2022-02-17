@@ -8,14 +8,24 @@ if (screen.width <= "800") {
 function change1() {
     document.getElementById("wdetail").style.display = "flex";
     document.getElementById("week").style.display = "none";
-    let element = document.querySelector('#btnwd::before')
+    let a=document.getElementById("btnwd").classList.contains("btnactive")
+    let b=document.getElementById("btnweek").classList.contains("btnactive")
+    if(!a){
+        document.getElementById("btnwd").classList.add("btnactive")
+        document.getElementById("btnweek").classList.remove("btnactive")
+    }
 }
 function change2() {
     document.getElementById("week").style.display = "flex";
     document.getElementById("wdetail").style.display = "none";
+    let a=document.getElementById("btnwd").classList.contains("btnactive")
+    let b=document.getElementById("btnweek").classList.contains("btnactive")
+    if(!b){
+        document.getElementById("btnweek").classList.add("btnactive")
+        document.getElementById("btnwd").classList.remove("btnactive")
+    }
+
 }
-
-
 // on enter btn enable search
 document.addEventListener("keyup", (e) => {
     if (e.key === "Enter") {
@@ -222,8 +232,8 @@ function setimage(dom, id) {
                 document.body.style.backgroundImage = "url(assets/mistwR.jpg)"
             }
             else {
-                document.getElementById("main1").style.backgroundImage = "url(assets/tqjq_z70r_170504.jpg)"
-                document.body.style.backgroundImage="url(assets/tqjq_z70r_170504.jpg)"
+                document.getElementById("main1").style.backgroundImage = "url(assets/eric-muhr-Fs-bcmsV-hA-unsplash.jpg)"
+                document.body.style.backgroundImage="url(assets/eric-muhr-Fs-bcmsV-hA-unsplash.jpg)"
                 document.body.className="body2"
             }
         }

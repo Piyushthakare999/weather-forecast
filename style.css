@@ -353,14 +353,23 @@ nav>div{
     overflow-x:hidden;
 }
 #dbtns{
+    box-sizing: border-box;
+    background-color: rgba(0, 225, 255, 0.438);
+    border-radius: 5px;
     display: flex;
     justify-content: space-around;
     position: relative;
+    
     /* hello */
     /* background-color: red; */
 }
-/* #btnwd{
-} */
+
+.btnactive{
+    transition: all .1s;
+    /* border: 2px solid rgb(0, 102, 255); */
+    background-color: rgb(0, 195, 255);
+    border-radius: 5px;
+}
 /* #btnwd::before{
     content: '';
     position: absolute;
