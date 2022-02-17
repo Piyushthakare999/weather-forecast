@@ -50,7 +50,7 @@ nav>div{
 #webname{
     font-family: 'Redressed', cursive;
 
-    font-size: 2.5vw;
+    font-size: 33px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,8 +100,9 @@ nav>div{
   }
 
   .search-box {
+      margin: auto;
       padding-left: 10px;
-    height: 5vh;
+    height: 30px;
       float: inline-end;
       /* padding: 3px; */
       background-color: transparent;
@@ -145,6 +146,7 @@ nav>div{
       width: 100%;
       background-color: #00e4c9;
       z-index: -1;
+      border-radius: 4px;
     }
     
     /*  */
@@ -196,8 +198,8 @@ nav>div{
     
 }
 #welcome>button{
-    margin: 2vw;
-    padding: .5vw 0vw;
+    margin: 20px;
+    padding: 10px 40px;
     background-color: var(--first);
     border: none;
     border-radius: 5px;
@@ -206,11 +208,14 @@ nav>div{
     transition: all .3s ;
 }
 #welcome>button:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    background-color:#05c7b0 ;
     transition: all .3s ;
 }
 #welcome>input{
     padding: 7px;
+    background: rgba(255, 255, 255, 0.589);
+    border: 1.7px solid black;
 }
 #in2:focus{
     background-color:#c7fff9cc;
@@ -468,6 +473,15 @@ td>img{
     #detail{
         width: 50%;
     }
+    body{
+        /* background-position-x: center; */
+        background-size: 80vw 100vh;
+    }
+    #intro{
+        background-color: rgba(255, 255, 255, 0.096);
+        backdrop-filter: blur(4px);
+
+    }
     
 }
 /* 820 */
@@ -475,10 +489,10 @@ td>img{
     /* first page */
 
     #intro{
-        background-color: rgba(255, 255, 255, 0.527);
+        background-color: rgba(255, 255, 255, 0.24);
         border-radius: 20px;
-        box-shadow: 4px 4px 12px rgb(0, 0, 0),
-        -4px -4px 8px white;
+        box-shadow: 3px 3px 12px rgb(0, 0, 0),
+        -3px -3px 8px white;
         width: 50%;
         backdrop-filter: blur(7px);
         flex-direction: column;
@@ -488,24 +502,32 @@ td>img{
         text-shadow: 2px 2px 2px black;
     }
     body{
-        background-position-x: right;
-    background-repeat: no-repeat;
-    background-size:100vw 100vh ;
+        background-position-x: auto;
+        background-repeat: no-repeat;
+        background-size:100vw 100vh ;
+        background: url("assets/sunset.jpg");
+        background-size: auto 100%;
     }
-    nav>img{
+    /* nav>img{
         height: 6vw;
         width: 6vw;
-    }
+    } */
     .search-container{
         width: 50vw;
     }
+    #searchtop{
 
+        justify-content: center;
+    }
+    nav>div{
+        padding: 10px;
+    }
     #webname{
-        font-size: 5vw;
+        font-size: 40px;
     }
     /* second page */
     #main1{
-        height: 90vh;
+        /* height: 90vh; */
         width: 97vw;
     }
     #detail{
@@ -520,6 +542,7 @@ td>img{
         position: fixed;
         overflow: hidden;
     } */
+
     nav{
         display: block;
     }
@@ -538,7 +561,7 @@ td>img{
     }
     #main1{
         width: 100vw;
-        /* height: 100vh; */
+        /* height: 100vh;problem */
     }
     body{
         background-attachment: fixed;
@@ -555,37 +578,46 @@ td>img{
     }
     #detail{
         /* display: none; */
-        height: 100vh;
+        /* height: 100vh; */
         width: 100%;
         height: auto;
         overflow-y:auto;   
         overflow-x: auto; 
     }
     #temp{
-        font-size: 11vw;
+        font-size: 65px;
     }
     #location{
-        font-size: 3vw;
+        font-size: 25px;
 
     }
 
     #icon>img{
         margin: auto;
-        height: 3rem;
+        height: 60px;
         width: 70%;
     }
 
     #basic{
-        margin:  5vw   2vw  0px;
+        /* margin:  5vw   2vw  0px; */
+        margin: 30px 10px 20px;
     }
     #b2{
+        margin-bottom: 0px;
+        padding-right: 0px;
+        /* align-items: center; */
+        /* padding-bottom: 20px; */
+        /* height */
         height: 10vh;
     }
+    #icon{
+        margin-bottom: 20px;
+    }
     #des{
-        font-size: 2.6vw;
+        font-size: 17px;
     }
     #wdetail td{
-        padding: 2vh;
+        padding: 25px;
     }
 }
 
@@ -593,6 +625,15 @@ td>img{
 @media   screen and (max-width: 460px) {
     
     #webname{
-        font-size: 5vw;
+        font-size: 40px;
+    }
+    #temp{
+        font-size: 55px;
+    }
+    #location{
+        font-size: 20px;
+    }
+    #icon{
+        margin-bottom: 9px;
     }
 }
