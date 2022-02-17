@@ -15,12 +15,13 @@ body{
 }
 .body2{
     backdrop-filter: blur(20px);
-    /* filter: blur(-10px); */
+    /* filter: blur(10px); */
     /* z-index: -1; */
     /* background-position: 100% 100%; */
     background-position-x: auto;
-    background-size: 100vw 100vh;
-
+    background-size: center center ;
+    background-attachment: fixed;
+    background-size: cover;
 }
 /* navbar */
 nav>img{
@@ -198,6 +199,8 @@ nav>div{
     
 }
 #welcome>button{
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
     margin: 20px;
     padding: 10px 40px;
     background-color: var(--first);
@@ -262,7 +265,7 @@ nav>div{
     width: 85vw; */
     margin: auto;
     display: none;
-    margin-top: 1vw;
+    /* margin-top: 1vw; */
 }
 #main1{
     height: 88vh;
@@ -493,7 +496,7 @@ td>img{
         border-radius: 20px;
         box-shadow: 3px 3px 12px rgb(0, 0, 0),
         -3px -3px 8px white;
-        width: 50%;
+        width: 70%;
         backdrop-filter: blur(7px);
         flex-direction: column;
         margin: auto ;
@@ -504,12 +507,12 @@ td>img{
     }
     body{
         background-position-x: auto;
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
         /* background-size:100vw 100vh ; */
-        background: url("assets/sunset.jpg");
-        background-size:  center center;
-        background-attachment: fixed;
+        background: url("assets/sunset.jpg") no-repeat center center fixed;
+        /* background-size:  center center; */
         background-size: cover;
+        /* background-size: cover; */
         overflow: hidden; 
         /* object-fit: scale-down; */
         /* background-position: auto; */
@@ -529,6 +532,7 @@ td>img{
         padding: 10px;
     }
     #webname{
+        margin-top: 10px;
         font-size: 40px;
     }
     /* second page */
@@ -568,9 +572,6 @@ td>img{
     #main1{
         width: 100vw;
         /* height: 100vh;problem */
-    }
-    body{
-        background-attachment: fixed;
     }
 
     #intro{
@@ -627,9 +628,11 @@ td>img{
     }
 }
 
-/* 460 */
-@media   screen and (max-width: 460px) {
-    
+/* 500 */
+@media   screen and (max-width: 500px) {
+    #welcome>button {
+        font-size: 18px;
+    }
     #webname{
         font-size: 40px;
     }
@@ -641,5 +644,8 @@ td>img{
     }
     #icon{
         margin-bottom: 9px;
+    }
+    #intro{
+        width: 85vw;
     }
 }
