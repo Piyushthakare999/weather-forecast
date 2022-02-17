@@ -138,17 +138,20 @@ function weatherDetails(info) {
     document.querySelector("#intro").style.display = "none";
     document.querySelector("#main").style.display = "flex";
     // const { description, id } = info.weather[0];
-    const { feels_like, humidity, pressure, temp, uvi, dew_point, dt, sunrise, sunset } = info.current;
+    const { feels_like, humidity, pressure, temp, uvi, dew_point, dt, sunrise, sunset,wind_speed } = info.current;
     // console.log(feels_like)
     //basic area
 
     // getting time of country
-    let d = new Date()
     let timezone = info.timezone_offset
+    // let newt=inttime(timezone)
+    let d = new Date()
+    // console.log/(d)
     localTime = d.getTime()
     localOffset = d.getTimezoneOffset() * 60000
     utc = localTime + localOffset
     var atlanta = (utc + (1000 * timezone))
+    // console.log(atlanta)
     let t = window.moment(atlanta).format("hh:mm a, DD MMM ")
     document.getElementById("datentime").innerText = t
     document.getElementById("des").innerText = info.current.weather[0].description
@@ -161,16 +164,36 @@ function weatherDetails(info) {
     document.querySelector("#temperature span").innerText = `${temp}`
     document.getElementById("uvi").innerText = `${uvi}`
     document.getElementById("dew_point").innerText = `${dew_point}`
-    document.getElementById("Sunrise").innerText = `${sunrise}`
-    document.getElementById("Sunset").innerText = `${sunset}`
+    // let sr=window.moment(sunrise).tz(info.timeZone).format("hh:mm ")
+
+    document.getElementById("Wind-speed").innerText = `${wind_speed}`
+
+    // document.getElementById("Sunset").innerText = `${sunset}`
     let x = Math.floor(`${temp}`)
     document.querySelector("#temp>span").innerText = x
 
 
+    console.log(convertTZ(sunrise,info.timezone))
     // getting image accordinglay
     setimage("icon", id);
 
 
+}
+
+function inttime(timezone){
+    let d = new Date()
+    // let timezone = info.timezone_offset
+    localTime = d.getTime()
+    localOffset = d.getTimezoneOffset() * 60000
+    utc = localTime + localOffset
+    var atlanta = (utc + (1000 * timezone))
+    return atlanta;
+    // let t = window.moment(atlanta).format("hh:mm a, DD MMM ")
+
+}
+
+function convertTZ(date, tzString) {
+    return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tzString}));   
 }
 
 function weekdata(data) {
@@ -196,7 +219,7 @@ function weekdata(data) {
 function setimage(dom, id) {
     console.log(id, dom)
     if (!s) {
-        document.body.style.background = "#a2d5fd"
+        // document.body.style.background = "#a2d5fd"
     }
 
     if (id === 800) {
@@ -207,6 +230,9 @@ function setimage(dom, id) {
             }
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/clearw.jpg)"
+                document.body.style.backgroundImage="url(assets/clearw.jpg)"
+                document.body.className+="body2"
+
             }
         }
     }
@@ -219,6 +245,9 @@ function setimage(dom, id) {
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/9zrt_utdi_190210.jpg)"
                 document.getElementById("detail").style.color = "white"
+                document.body.style.backgroundImage="url(assets/9zrt_utdi_190210.jpg)"
+                document.body.className+="body2"
+
             }
         }
     }
@@ -230,6 +259,8 @@ function setimage(dom, id) {
             }
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/free-snow.jpg)"
+                document.body.style.backgroundImage="url(assets/free-snow.jpg)"
+                document.body.className+="body2"
             }
         }
     }
@@ -241,6 +272,8 @@ function setimage(dom, id) {
             }
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/tqjq_z70r_170504.jpg)"
+                document.body.style.backgroundImage="url(assets/tqjq_z70r_170504.jpg)"
+                document.body.className+="body2"
             // document.getElementById("main1").style.color = "white"
             // document.getElementById("detail").style.color = "white"
             }
@@ -254,6 +287,8 @@ function setimage(dom, id) {
             }
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/cloudw.jpg)"
+                document.body.style.backgroundImage="url(assets/cloudw.jpg)"
+                document.body.className+="body2"
             }
         }
     }
@@ -265,6 +300,8 @@ function setimage(dom, id) {
             }
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/drizzle.jpg)"
+                document.body.style.backgroundImage="url(assets/drizzle.jpg)"
+                document.body.className+="body2"
             }
         }
     }
@@ -277,6 +314,8 @@ function setimage(dom, id) {
             }
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/rainyweather.jpg)"
+                document.body.style.backgroundImage="url(assets/rainyweather.jpg)"
+                document.body.className+="body2"
             }
         }
     }
