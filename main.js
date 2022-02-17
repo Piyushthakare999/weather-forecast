@@ -231,7 +231,7 @@ function setimage(dom, id) {
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/clearw.jpg)"
                 document.body.style.backgroundImage="url(assets/clearw.jpg)"
-                document.body.className+="body2"
+                document.body.className="body2"
 
             }
         }
@@ -246,7 +246,7 @@ function setimage(dom, id) {
                 document.getElementById("main1").style.backgroundImage = "url(assets/9zrt_utdi_190210.jpg)"
                 document.getElementById("detail").style.color = "white"
                 document.body.style.backgroundImage="url(assets/9zrt_utdi_190210.jpg)"
-                document.body.className+="body2"
+                document.body.className="body2"
 
             }
         }
@@ -260,7 +260,7 @@ function setimage(dom, id) {
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/free-snow.jpg)"
                 document.body.style.backgroundImage="url(assets/free-snow.jpg)"
-                document.body.className+="body2"
+                document.body.className="body2"
             }
         }
     }
@@ -273,7 +273,7 @@ function setimage(dom, id) {
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/tqjq_z70r_170504.jpg)"
                 document.body.style.backgroundImage="url(assets/tqjq_z70r_170504.jpg)"
-                document.body.className+="body2"
+                document.body.className="body2"
             // document.getElementById("main1").style.color = "white"
             // document.getElementById("detail").style.color = "white"
             }
@@ -288,7 +288,7 @@ function setimage(dom, id) {
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/cloudw.jpg)"
                 document.body.style.backgroundImage="url(assets/cloudw.jpg)"
-                document.body.className+="body2"
+                document.body.className="body2"
             }
         }
     }
@@ -301,7 +301,7 @@ function setimage(dom, id) {
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/drizzle.jpg)"
                 document.body.style.backgroundImage="url(assets/drizzle.jpg)"
-                document.body.className+="body2"
+                document.body.className="body2"
             }
         }
     }
@@ -315,7 +315,7 @@ function setimage(dom, id) {
             else {
                 document.getElementById("main1").style.backgroundImage = "url(assets/rainyweather.jpg)"
                 document.body.style.backgroundImage="url(assets/rainyweather.jpg)"
-                document.body.className+="body2"
+                document.body.className="body2"
             }
         }
     }
