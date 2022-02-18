@@ -1,5 +1,5 @@
 let city;
-const apiKey = '1e6255ebf9fea5c3b503b5cb118b941d'
+let apiKey=api_key;
 let s = false;
 if (screen.width <= "800") {
     s = true;
